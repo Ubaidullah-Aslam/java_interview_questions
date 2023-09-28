@@ -1,4 +1,4 @@
-
+/**
 What is Java Collection Framework?
     A java collection framework is a collection of interfaces and classes which are used to store and
     process data efficiently, as a Collection is something which is used to store Data objects.
@@ -373,3 +373,42 @@ What is CopyOnWriteArrayList? How it is different than ArrayList?
 
 What is BlockingQueue?
     <lecture>
+  */
+package com.training;
+
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
+import java.util.concurrent.ConcurrentHashMap;
+
+class Collection {
+	public static void main(String[] args) {
+		Set<Integer> set = new LinkedHashSet<>();
+		set.add(null);
+		set.add(4);
+		System.out.println(set);
+		Set<Integer> treeSet = new TreeSet<>();
+		set.add(null);
+
+		Map<Integer, Integer> map = new LinkedHashMap<>();
+		map.put(null,4);
+
+		map.put(null,14);
+		map.put(4,5);
+		System.out.println(map);
+		Map<Integer, Integer> treeMap = new TreeMap<>();
+		treeMap.put(2, null);
+		
+		Map<Integer, Integer> curMap = new ConcurrentHashMap<>();
+		curMap.put(2, 2);
+		
+		Abc a;
+		Map.Entry< Integer, Integer> entry = curMap.entrySet().iterator().next();
+	}
+}
+class Abc {
+	static int a;
+}

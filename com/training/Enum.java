@@ -1,4 +1,4 @@
-
+/**
 L1-01:00 What is enum?
     Enum is a special type in java that is used to define collection of constants.
     Enum of colours:
@@ -153,3 +153,27 @@ L2-10:03 What are benefits of using 'enum' in java?
     👉🏻 'enum' has its own namespace.
 
     👉🏻 We can use 'enum' with switch case..
+    
+   **/
+package com.training;
+public enum Enum {
+	MON, TUE, WED;
+	@Override
+	public String toString() {
+		return this.name();
+	}
+	
+
+	public static void main(String[] args) {
+		System.out.println(Enum.MON.toString());
+		System.out.println(Enum.values()[Enum.WED.ordinal()].toString());
+	}
+	protected interface TestI {
+		void fun();
+	}
+	final class TestC {
+		void fun() {
+			System.out.println("Testing Class");
+		}
+	}
+}

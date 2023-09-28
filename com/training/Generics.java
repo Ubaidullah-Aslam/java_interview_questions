@@ -1,4 +1,4 @@
-
+/**
 What is Generics in Java ? why we should use Generics?⭐️
     //benefits of using Generics?
     Simply stating generics is a mechanism for type checking at compile time
@@ -214,3 +214,13 @@ Difference between List<?> and List<Object> in Java?
     listOfAnyType = listOfString; //legal
     listOfAnyType = listOfInteger; //legal
     listOfObjectType = (List<Object>) listOfString; //compiler error - in-convertible types
+*/
+
+package com.training;
+
+public class Generics {
+	public static void main(String[] args) {
+		
+				//System::out.println;
+	}
+}

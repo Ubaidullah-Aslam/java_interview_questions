@@ -1,4 +1,8 @@
--- Flow Control --
+package com.training;
+import java.util.Arrays;
+import java.util.List;
+
+/**-- Flow Control --
 
 L1-00:24 What are Control flow statements?
     These are the statements which are used for -
@@ -249,3 +253,17 @@ L2-18:08 What are the various transfer statements used in java?
    5. throw
 
    6. assert
+*/
+
+public class FlowControl {
+
+	public static void main(String[] args) {
+		List<Integer> list = Arrays.asList(1,2,3);
+		for(Integer a: list) {
+			System.out.println(a);
+		}
+		list.stream().map(i-> i*2).filter(x-> x>2).forEach(i-> System.out.println(i));
+
+	}
+
+}

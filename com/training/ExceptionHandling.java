@@ -1,4 +1,4 @@
-
+/**
 What is Exception in Java?⭐️
     Exception is an error event that can happen during the execution of a program
     and disrupts it’s normal flow.
@@ -155,3 +155,14 @@ What is wrong with following Java Exception code:
     but if you change IOException to Exception compiler error will disappear
     because Exception can be used to catch all RuntimeException which doesn't require declaration in throws clause
     because compiler can not check for RuntimeExceptions.
+    
+   */
+
+
+package com.training;
+
+public class ExceptionHandling {
+	public static void main(String[] args) {
+		
+	}
+}

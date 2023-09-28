@@ -1,4 +1,4 @@
-
+/**
 What is a design pattern ?
     Design patterns is the basket of pre-designed solutions to common problems in Object Oriented programming
     given by various programmers in the world.
@@ -199,3 +199,12 @@ Can you name few design patterns used in standard JDK library?⭐️
 What Are J2ee Patterns?
     These design patterns are specifically concerned with the presentation tier.
     These patterns are identified by Sun Java Center.
+    */
+
+package com.training;
+public class DesignPatterns {
+	public static void main(String[] args) {
+		
+	}
+}
+

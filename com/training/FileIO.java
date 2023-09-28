@@ -1,4 +1,5 @@
-//File IO
+/**
+ //File IO
 
 L1-00:55 What is IO stream? What are the types of IO streams?
     Java I/O Stream is an abstraction that either produces or consumes data.
@@ -231,3 +232,12 @@ ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStr
     Yes
 
 Explain hierarchy of InputStream and OutputStream.
+*/
+
+package com.training;
+public class FileIO {
+	public static void main(String[] args) {
+		
+	}
+}
+

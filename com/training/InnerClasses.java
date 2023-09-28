@@ -1,4 +1,4 @@
-
+/**
 What is Inner class?
     Any Class which is not a top level Class or any Class which is declared inside another Class
     is Inner class.
@@ -217,3 +217,10 @@ Is it possible to define Interface inside Class or Class inside interface?
         }
 
     Note: If we implement the Interface with its own inner Class then it is called as its default implementation.
+*/
+package com.training;
+public class InnerClasses{
+	public static void main(String[] args) {
+		
+	}
+}

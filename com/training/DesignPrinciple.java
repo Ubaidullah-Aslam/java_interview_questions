@@ -1,4 +1,4 @@
-
+/**
 //Design Principles
 
 What are Software Design Principles?
@@ -15,3 +15,11 @@ What are SOLID principles?
     L -> Liskov substitution principle
     I -> Interface Segregation Principle
     D -> Dependency Inversion Principle.
+*/
+package com.training;
+
+public class DesignPrinciple {
+	public static void main(String[] args) {
+
+	}
+}

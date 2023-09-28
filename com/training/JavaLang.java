@@ -1,4 +1,4 @@
-//java.lang Package
+/**java.lang Package
 
 Why do not we need to Import java.lang Package in class?⭐️
 		We do not need to Import java.lang Package. Because all the classes in this Package are imported
@@ -220,3 +220,32 @@ When do Autoboxing and Unboxing occur?⭐️⭐️
 
 		-> The classic use of Autoboxing is in Collection. A collection is a group of objects.
 		So auto boxing is used with collections to add primitive types..
+*/
+package com.training;
+public class JavaLang {
+	public static void main(String[] args) {
+		String s1 = "abc";
+		System.out.println(System.identityHashCode(s1));
+		String s2 = new String("abc").intern();
+		System.out.println(System.identityHashCode(s2));
+		String s3 = new String(s2);
+		System.out.println(System.identityHashCode(s3));
+		String s4 = "abc";
+		System.out.println(System.identityHashCode(s4));
+
+		if(s1==s2) {
+			System.out.println("s1 is equal to s2");
+		}
+		if(s3==s2) {
+			System.out.println("s3 is equal to s2");
+		}
+		if(s4==s2) {
+			System.out.println("s4 is equal to s2");
+		}
+		System.out.println(System.identityHashCode(s1));
+        System.out.println("KB: " + (double) (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024);
+
+		System.out.println("End!");
+
+	}
+}

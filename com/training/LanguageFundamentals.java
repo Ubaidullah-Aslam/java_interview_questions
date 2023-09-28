@@ -1,4 +1,5 @@
-//Identifiers
+/**
+Identifiers
 
 L1-00:35 What are identifiers in java?
     Name used to identify the class or a variable or A label or a method or a package.. such things
@@ -209,7 +210,7 @@ L4-00:13 What is main method?
     main method is a method which is entry point of execution of any java program.
 
     public class Exercise{
-    	public static void main(String[] args){
+    	public static int main(String[] args){
     		int a = 10;
     		byte b = 2;
     		char c = 'A';
@@ -275,3 +276,79 @@ L4-05:36 Can we change signature of main method?⭐️
 L5-07:10 Can we make main method final in java?⭐️
     Answer is yes, we can declare main method as final.
     This makes its implementation final; any other Class would not be able to change it.
+ */
+package com.training;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.stream.Stream;
+
+public class LanguageFundamentals {
+	public static void main(String abc){
+		System.out.println("Overload main");
+	}
+    public static String removeDuplicateLetters(String s) {
+    	short[] chCount = new short[26];
+    	for(char ch : s.toCharArray()) {
+    		chCount[ch-'a']++;
+    	}
+    	//Map<String, String> map = new HashMap<>();
+/*    	List<String> list = new ArrayList<>();
+    	String temp = s.charAt(0)+"";
+    	for(int i=1;i<s.length();i++) {
+    		if(s.charAt(i-1)>s.charAt(i)) {
+    			list.add(temp);
+    			temp=s.charAt(i)+"";
+    		} else if(s.charAt(i-1)<s.charAt(i)) {
+    			temp = temp.concat(s.charAt(i)+"");
+    		}
+    	}
+    	list.add(temp);
+    	list.forEach(games -> System.out.println(games));*/
+    	char[] result = Arrays.asList(s.toCharArray()).stream().reduce((a, b) -> {
+    		return addString(a.toString(),b.toString(), chCount);
+    	} ).orElse(null);
+    	System.out.println(result);
+    	
+        return result.toString();
+    }
+    public static char[] addString(String s1, String s2, short[] chCount) {
+    	if(s1.contains(s2)) 
+    		return s1.toCharArray();
+		for(int i=0;i<s2.length();i++) {
+			if(s1.compareTo(s2.substring(i))>0){
+    			s1=s1.replace(s2.charAt(i),' ');
+			} else {
+    			s2=s2.replace(s2.charAt(i),' ');
+			} 
+		}
+		return s2.concat(s1).toCharArray();
+	
+    }
+    public static void main(String[] abc){
+        String s1 = "cbacdcbc";
+        String s2 = "abd";
+        System.out.println("cbacd".compareTo("c"));
+        removeDuplicateLetters(s1);
+        
+        s1.codePointAt(0);
+        Stream<char[]> st1 = Arrays.asList(s1.toCharArray()).stream();
+        Stream<char[]> st2 = Arrays.asList(s2.toCharArray()).stream();
+        System.out.println(s2.compareTo(s1));
+//		Arrays.asList(s1.toCharArray()).stream().iterate(0,i -> i+1);
+//		Stream.iterate(0, i->i+1).limit(s1.length())
+//        .filter(i -> !st1.skip(i).findFirst().equals(st2.skip(i).findFirst()))
+//        .forEach(i -> System.out.println(i));
+		//s3.forEach(x -> System.out.println(x));
+        		//(Arrays.asList(s2.toCharArray())::contains));
+    	String $test ="test";
+        int _num = 5;
+        System.out.println("with $ "+$test) ;
+        System.out.println("with _ "+_num) ;
+        main("ts");
+        }
+}

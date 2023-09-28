@@ -1,3 +1,4 @@
+/**
 What is NIO?⭐️
     Non-Blocking I/O: Java provides a different way to work with I/O than the standard I/O Apis.
             -> NIO supports buffer-oriented and channel based approach for I/O operations.
@@ -181,3 +182,10 @@ What is the memory mapped buffer in Java?
 
 What is the difference between ByteBuffer and CharBuffer in Java?
     A ByteBuffer is a buffer that holds (8-bit) byte values and CharBuffer holds (16 bit) char values..
+*/
+package com.training;
+public class FileNIO {
+	public static void main(String[] args) {
+		
+	}
+}

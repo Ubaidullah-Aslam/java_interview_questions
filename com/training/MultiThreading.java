@@ -1,4 +1,4 @@
-
+/**
 L1-00:19 What is MultiThreading and its Purpose?
   Its a way to achieve multi-tasking in java.
 
@@ -531,3 +531,12 @@ List the implementations of BlockingQueue.
     LinkedBlockingQueue,
     PriorityBlockingQueue,
     and SynchronousQueue.
+    */
+package com.training;
+
+public class MultiThreading {
+	public static void main(String[] args) {
+		
+	}
+}
+

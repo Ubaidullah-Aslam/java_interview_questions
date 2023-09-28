@@ -1,4 +1,4 @@
------JVM----
+/**-----JVM----
 
 L1-00:40 What do you mean by Virtual Machine?
     A software program that simulates behaviour of a physical machine, which can perform operations
@@ -359,3 +359,23 @@ What are memory leaks? What are soft references?
     Soft leaks: it may be possible that any objects are not being used for years but any third party API or
     any other thing is there for keeping it live.. these kind of objects should be garbaged but they are
     not because they are somehow referenced from stack.⭐️
+*/
+package com.training;
+public class JVMArchitecture{
+	public static void main(String[] args) {
+		BasicConcepts abc = new BasicConcepts();
+		try {
+			Class c = Class.forName("com.training.BasicConcepts");
+			//static Class d = ClassLoader.loadClass("BasicConcepts");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception ex) {
+			
+		}
+
+		System.out.println(abc.getClass().getClassLoader().getName());
+		System.out.println(ClassLoader.getSystemClassLoader());
+
+	}
+}

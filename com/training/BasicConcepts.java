@@ -1,4 +1,4 @@
-
+/**
 Operators:
 
 How many types of operators are present in java?
@@ -183,4 +183,34 @@ What is instanceof operator?
 
 		-> This operator is used for Type Checking.
 
+*/
+package com.training;
+public class BasicConcepts {
+	public static void main(String[] args) {
+		int a = 2; int b= 4;
+		System.out.println(a&b); //0010 0100
+		System.out.println(a>2|b<3); 
+		System.out.println(~1); //0001 -> 0010
+		
+		System.out.println("--------------"); //0001 -> 0010
+		System.out.println(Integer.toBinaryString(20)); //0001 -> 0010
+		System.out.println(Integer.toBinaryString(21)); //0001 -> 0010
 
+		System.out.println(20>>1); //0001 -> 0010
+		System.out.println(21<<1); //0001 -> 0010
+		System.out.println(Integer.toBinaryString(20>>1)); //0001 -> 0010
+		System.out.println(Integer.toBinaryString(21<<1)); //0001 -> 0010
+
+		
+		System.out.println("--------------"); //0001 -> 0010
+
+		System.out.println(Integer.toBinaryString(-14)); //0001 -> 0010
+		System.out.println(Integer.toBinaryString(-1)); //0001 -> 0010
+		System.out.println(Integer.toBinaryString(536870910)); 
+		System.out.println(-14>>>3); //0001 -> 0010
+		System.out.println(-14>>2); //0001 -> 0010
+		System.out.println(Integer.toBinaryString(-1>>>2)); //0001 -> 0010
+		System.out.println(Integer.toBinaryString(-1>>2)); //0001 -> 0010
+
+	}
+}

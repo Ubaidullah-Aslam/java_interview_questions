@@ -1,4 +1,4 @@
-
+/**
 //Object Oriented Programming [OOP]
 
 //Classes and Objects - Building Blocks of OOP
@@ -543,3 +543,144 @@ L11-03:09 How OOPs is different than Procedural programming?
 
     -> Procedural language provides less scope of code reuse but object oriented language provides more
     scope of code reuse.
+    
+*/
+package com.training;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
+
+class OOPS {
+	public static void main(String[] args) {
+		Set<Integer> set = new LinkedHashSet<>();
+		set.add(null);
+		set.add(4);
+		System.out.println(set);
+		
+		Map<Integer, Integer> map = new LinkedHashMap<>();
+		map.put(null,4);
+
+		map.put(null,14);
+		map.put(4,5);
+		System.out.println(map);
+		
+		//OOPS obj = new OOPS();
+		//System.out.println(obj.decodeAtIndex("a2345678999999999999999", 1));
+		Abstract abs = new AbsImpl();
+		abs.pbf();
+		Abs.spbf();//Not possible abs.spbf();
+		final A a = new A();
+		a.spbf();
+		B b = new B();
+		b.spbf();
+		A b1 = new B();
+		b1.spbf();
+		
+		
+		A.spbf();
+		B.spbf();
+		
+		a.setA(6);
+		a.f();
+		A a2 = new A();
+		a2.setA(5);
+		a2.f();
+		a2 = a;
+		a2.f();
+	}
+	public String decodeAtIndex(String s, int k) {
+	    StringBuilder sb = new StringBuilder();
+	    for(char ch: s.toCharArray()){
+	        if(ch>='a' && ch<='z'){
+	            sb.append(ch);
+	        } else {
+	            int no = (int)(ch-'1');
+	            String str =sb.toString();
+	            for(int i=0; i<no; i++)
+	            	sb.append(str);
+	        }
+	    }
+	    return sb.toString().charAt(k-1)+"";
+	}
+}
+
+interface Abs{
+	public final int a = 0;
+	private void pvf() {}
+	public void pbf();
+	static void sptf() {
+		System.out.println("Static Abs ptf");
+	}
+	public static void spbf() {
+		System.out.println("Static Abs pbf");
+		sptf();
+	}
+
+}
+abstract class Abstract{
+	private int a = 0;
+	protected void pvff() {
+		System.out.println("a : "+a);
+		a=10;
+		System.out.println("a : "+a);
+	}
+	public abstract void pbf();
+	static void sptff() {
+		System.out.println("Static Abstract ptf");
+	}
+	public static void spbff() {
+		System.out.println("Static Abstract pbf");
+		sptff();
+	}
+	Abstract(){
+//		super();
+		this(4);
+		System.out.println("Static Abstract");
+	}
+	Abstract(int a){
+		System.out.println("Static Abstract");
+	}
+
+}
+class AbsImpl extends Abstract{
+
+	@Override
+	public void pbf() {
+		pvff();
+		System.out.println("Abs Imple pbf");
+		
+	}
+	
+}
+class A {
+	int a;
+	{
+		a=3;
+		System.out.println(a);
+	}
+	A(){
+		a = 1;
+		System.out.println(a);
+	}
+	public void f() {
+		System.out.println(a);
+	}
+	public void setA(int a) {
+		this.a= a;
+	}
+	public static void spbf(){
+		System.out.println("A Static spbf");
+
+	}
+}
+class B extends A {
+	public static void spbf(){
+		System.out.println("B Static spbf");
+
+	}
+}
